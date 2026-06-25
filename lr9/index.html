@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KROKIT - Бизнес-тренеры и трекеры</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <header class="hero-section">
+        <img src="image/zvezda.svg" class="decor-star star-1" alt="декор">
+        <img src="image/zvezda.svg" class="decor-star star-2" alt="декор">
+        <img src="image/zvezda.svg" class="decor-star star-3" alt="декор">
+        <img src="image/zvezda.svg" class="decor-star star-4" alt="декор">
+
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="image/logo.svg" alt="KROKIT Logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" onclick="handleNavClick('Стартапам')">Стартапам</a></li>
+                    <li><a href="#" class="active" onclick="handleNavClick('Партнерам')">Партнерам</a></li>
+                    <li><a href="#" onclick="handleNavClick('О нас')">О нас</a></li>
+                    <li><a href="#" onclick="handleNavClick('Контакты')">Контакты</a></li>
+                    <li><a href="#" onclick="handleNavClick('FAQ')">FAQ</a></li>
+                </ul>
+                <div class="nav-right">
+                    <div class="social-icons">
+                        <a href="#" onclick="handleSocialClick('Facebook')"><img src="image/fb.svg" alt="fb"></a>
+                        <a href="#" onclick="handleSocialClick('VK')"><img src="image/wk.svg" alt="vk"></a>
+                        <a href="#" onclick="handleSocialClick('Instagram')"><img src="image/insta.svg" alt="instagram"></a>
+                        <a href="#" onclick="handleSocialClick('LinkedIn')"><img src="image/LinkedIN.svg" alt="linkedin"></a>
+                    </div>
+                    <a href="#" class="btn-submit small" onclick="handleApplication()">Подать заявку</a>
+                    <span class="lang-select" onclick="handleLanguage()">Ru ▾</span>
+                </div>
+            </nav>
+
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Интенсивные курсы обучения бизнес-тренеров и трекеров</h1>
+                    <p class="subtitle">Из профессионалов в менторы!</p>
+                    <p class="guarantee">Практика после обучения гарантирована</p>
+                    
+                    <div class="info-block">
+                        <div class="info-item">
+                            <img src="image/icon_time.svg" class="info-icon" alt="Иконка времени">
+                            <span class="text">01.06.2020 - 15.06.2020</span>
+                        </div>
+                        <div class="info-item">
+                            <img src="image/icon_place.svg" class="info-icon" alt="Иконка адреса">
+                            <span class="text">г. Минск, ул. Кальварийская, д.25, офис 611</span>
+                        </div>
+                        <div class="info-item">
+                            <img src="image/icon_online.svg" class="info-icon" alt="Иконка онлайн">
+                            <span class="text">Возможно ОНЛАЙН-обучение</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn-submit large" onclick="handleApplication()">Подать заявку</a>
+                </div>
+
+                <div class="hero-image">
+                    <img src="image/chel.svg" alt="Бизнесмен на ракете" class="hero-illustration">
+                </div>
+            </div>
+        </div>
+        <div class="wave-bottom"></div>
+    </header>
+
+
+    <section class="definitions-section">
+        <div class="container">
+            <div class="def-row">
+                <div class="def-text-block">
+                    <div class="bg-shape shape-top"></div>
+                    <h2>Бизнес-тренер – это</h2>
+                    <p>Ментор, который в сжатые сроки поделится реальным опытом, практическими кейсами и эффективными инструментами ведения бизнеса</p>
+                </div>
+                <div class="def-image-block">
+                    <img src="image/sidat.svg" alt="Иллюстрация: Бизнес-тренер" class="def-image">
+                </div>
+            </div>
+
+            <div class="def-row reverse">
+                <div class="def-text-block">
+                    <div class="bg-shape shape-bottom"></div>
+                    <h2>Трекер – это</h2>
+                    <p>Наставник команды проекта на период акселерации. Его задача – обеспечить эффективный рост стартапа путем применения собственного опыта.</p>
+                </div>
+                <div class="def-image-block">
+                    <img src="image/treker.svg" alt="Иллюстрация: Трекер" class="def-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Как проходит <span>обучение</span></h2>
+            
+            <div class="steps-grid-wrapper" id="stepsGrid">
+                <div class="step-column">
+                    <div class="step-card white-card shadow-card" onclick="showStepDetails('Старт', 'Подать заявку до 25.05.2020')">
+                        <div class="step-icon-top">
+                            <img src="image/raket.svg" alt="Старт">
+                        </div>
+                        <h3>Старт</h3>
+                        <p class="step-date">Подать заявку до<br><span>25.05.2020</span></p>
+                    </div>
+                </div>
+
+                <div class="grid-arrow">→</div>
+
+                <div class="step-column">
+                    <div class="step-card orange-wave-card shadow-card" onclick="showStepDetails('Курс Бизнес-тренера', 'Обучение бизнес-тренеров')">
+                        <div class="badge-num-large">1</div>
+                        <div class="orange-bottom-text">
+                            <h3>Курс<br>Бизнес-тренера</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="vertical-arrow-down">↓</div>
+                    
+                    <div class="step-card blue-finish-card shadow-card" onclick="showStepDetails('Финиш', 'Сертификат Бизнес-тренера')">
+                        <div class="flag-icon-wrap">
+                            <img src="image/finish.svg" alt="Финиш">
+                        </div>
+                        <h3>Финиш</h3>
+                        <ul class="finish-list">
+                            <li>Сертификат Бизнес-тренера</li>
+                            <li>Практика в стартап-акселераторе</li>
+                            <li>Доступ в закрытое сообщество бизнес-тренеров</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid-arrow">→</div>
+
+                <div class="step-column">
+                    <div class="step-card orange-wave-card shadow-card" onclick="showStepDetails('Курс Трекера', 'Обучение трекеров')">
+                        <div class="badge-num-large">2</div>
+                        <div class="orange-bottom-text">
+                            <h3>Курс<br>Трекера</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="vertical-line-down"></div>
+                    
+                    <div class="alert-inline-box shadow-card">
+                        <div class="alert-circle-icon">!</div>
+                        <p>Обучение трекерству возможно только после прохождения курса Бизнес-тренера</p>
+                    </div>
+                </div>
+
+                <div class="grid-arrow">→</div>
+
+                <div class="step-column">
+                    <div class="step-card blue-finish-card shadow-card unique-height" onclick="showStepDetails('Финиш', 'Сертификат Трекера')">
+                        <div class="flag-icon-wrap">
+                            <img src="image/finish.svg" alt="Финиш">
+                        </div>
+                        <h3>Финиш</h3>
+                        <ul class="finish-list">
+                            <li>Сертификат Трекера</li>
+                            <li>Доступ в закрытое сообщество трекеров</li>
+                            <li>Практика в стартап-акселераторе</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="courses-select-section">
+        <div class="course-bg-shape shape-left"></div>
+        <div class="course-bg-shape shape-right"></div>
+
+        <div class="container">
+            <div class="courses-flex-row">
+                <div class="course-main-card">
+                    <div class="course-card-hero">
+                        <img src="image/biznes.svg" alt="Курс Бизнес-тренера">
+                    </div>
+                    <div class="course-card-body">
+                        <p class="course-label">Курс</p>
+                        <h3 class="course-title">Бизнес-тренера</h3>
+                        
+                        <div class="course-section-block">
+                            <h4>Требования:</h4>
+                            <p>Являться экспертом в своей области с опытом работы от 3 лет</p>
+                        </div>
+
+                        <div class="course-section-block">
+                            <h4>Кто Вы:</h4>
+                            <ul class="course-bullets">
+                                <li>топ-менеджер компании</li>
+                                <li>product-менеджер</li>
+                                <li>менеджер проектов</li>
+                                <li>руководитель</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="course-card-footer">
+                        <a href="#" class="btn-more" onclick="showCourseDetails('Бизнес-тренера')">Подробнее</a>
+                    </div>
+                </div>
+
+                <div class="course-main-card">
+                    <div class="course-card-hero">
+                        <img src="image/curs.svg" alt="Курс Трекера">
+                    </div>
+                    <div class="course-card-body">
+                        <p class="course-label">Курс</p>
+                        <h3 class="course-title">Трекера</h3>
+                        
+                        <div class="course-section-block">
+                            <h4>Требования:</h4>
+                            <p>Обязательно иметь опыт ведения бизнеса минимум 5 лет</p>
+                        </div>
+
+                        <div class="course-section-block">
+                            <h4>Кто Вы:</h4>
+                            <ul class="course-bullets">
+                                <li>
+                                    <strong>предприниматель</strong>
+                                    <span>который хочет научиться увеличивать прибыль своей компании</span>
+                                </li>
+                                <li>
+                                    <strong>инвестор (бизнес-ангел)</strong>
+                                    <span>который инвестирует в IT-стартапы и хочет, чтобы его стартап вышел на прибыль</span>
+                                </li>
+                                <li>
+                                    <strong>top-менеджер корпорации</strong>
+                                    <span>который хочет запускать новые успешные продукты</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="course-card-footer">
+                        <a href="#" class="btn-more" onclick="showCourseDetails('Трекера')">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="benefits-section">
+        <div class="benefit-bg-blur"></div>
+
+        <div class="container">
+            <h2 class="section-title" style="color: #1e2e4f;">Что получит бизнес-тренер</h2>
+
+            <div class="benefits-grid">
+                <div class="benefits-row row-four">
+                    <div class="benefit-card" onclick="showBenefit(this)">
+                        <div class="benefit-icon-wrap">
+                            <img src="image/p1.svg" alt="Опыт преподавания">
+                        </div>
+                        <p>Опыт преподавательской деятельности со стартапами</p>
+                    </div>
+
+                    <div class="benefit-card" onclick="showBenefit(this)">
+                        <div class="benefit-icon-wrap">
+                            <img src="image/p2.svg" alt="Ознакомление с инструментами">
+                        </div>
+                        <p>Ознакомление с основными инструментами бизнеса</p>
+                    </div>
+
+                    <div class="benefit-card" onclick="showBenefit(this)">
+                        <div class="benefit-icon-wrap">
+                            <img src="image/p3.svg" alt="Нетворкинг">
+                        </div>
+                        <p>Нетворкинг с опытными бизнесменами и участниками стартапов</p>
+                    </div>
+
+                    <div class="benefit-card" onclick="showBenefit(this)">
+                        <div class="benefit-icon-wrap">
+                            <img src="image/p4.svg" alt="Разработка гипотез">
+                        </div>
+                        <p>Опыт разработки гипотез и ценностных предложений</p>
+                    </div>
+                </div>
+
+                <div class="benefits-row row-three">
+                    <div class="benefit-card" onclick="showBenefit(this)">
+                        <div class="benefit-icon-wrap">
+                            <img src="image/p5.svg" alt="Анализ продукта">
+                        </div>
+                        <p>Знания о проведении анализа продукта и исследовании рынка</p>
+                    </div>
+
+                    <div class="benefit-card" onclick="showBenefit(this)">
+                        <div class="benefit-icon-wrap">
+                            <img src="image/p5.png" alt="Дорожные карты">
+                        </div>
+                        <p>Навык планирования и разработки дорожных карт</p>
+                    </div>
+
+                    <div class="benefit-card" onclick="showBenefit(this)">
+                        <div class="benefit-icon-wrap">
+                            <img src="image/p6.svg" alt="Оценка рисков">
+                        </div>
+                        <p>Умение определять экономическую эффективность и оценивать риски</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="program-section">
+        <div class="program-bg-blur"></div>
+
+        <div class="container">
+            <h2 class="section-title" style="color: #1e2e4f;">Программа обучения бизнес-тренера</h2>
+            
+            <div class="program-meta">
+                <div class="meta-item">
+                    <img src="image/time.png" alt="Часы">
+                    <span>80 часов</span>
+                </div>
+                <div class="meta-item">
+                    <img src="image/calendar.svg" alt="Календарь">
+                    <span>Пн-Пт 19:00-21:00, Сб-Вс 10:00-18:00</span>
+                </div>
+            </div>
+
+            <div class="program-grid" id="programGrid">
+                <div class="program-card">
+                    <div class="prog-card-header">
+                        <h3>СТРАТЕГИЯ И ИЗУЧЕНИЕ РЫНКА</h3>
+                        <div class="prog-img-wrap">
+                            <img src="image/l1.svg" alt="Стратегия">
+                        </div>
+                    </div>
+                    <ul class="prog-list" id="progList1">
+                        <li>Сегментация и анализ рынка определение ценности продукта</li>
+                        <li>Позиционирование продукта, вижен, сторителлинг</li>
+                        <li>Анализ конкурентов</li>
+                        <li>Создание Roadmap, стратегии развития продукта, процесс работы над её изменением</li>
+                        <li>Методология запуска продукта</li>
+                        <li>Практическая работа с продуктовым кейсом</li>
+                        <li>Генерация продуктовых улучшений</li>
+                        <li>Разработка описания ЦА</li>
+                    </ul>
+                </div>
+
+                <div class="program-card">
+                    <div class="prog-card-header">
+                        <h3>ИНСТРУМЕНТЫ ВЕДЕНИЯ БИЗНЕСА</h3>
+                        <div class="prog-img-wrap">
+                            <img src="image/l2.svg" alt="Инструменты">
+                        </div>
+                    </div>
+                    <ul class="prog-list">
+                        <li>Использование методологии SMART</li>
+                        <li>Циклы HADI как способ ускорения развития продукта</li>
+                        <li>Интервью и опросы с пользователями (CustDev)</li>
+                        <li>Проектирование MVP</li>
+                        <li>Основы проведения когортного анализа</li>
+                        <li>UNIT-экономика</li>
+                        <li>Метрики стартапа</li>
+                        <li>Построение и расчёт бизнес-моделей</li>
+                    </ul>
+                </div>
+
+                <div class="program-card">
+                    <div class="prog-card-header">
+                        <h3>ОСНОВЫ РАБОТЫ В КОМАНДЕ</h3>
+                        <div class="prog-img-wrap">
+                            <img src="image/l3.svg" alt="Команда">
+                        </div>
+                    </div>
+                    <ul class="prog-list">
+                        <li>Планирование работы команды</li>
+                        <li>Оптимизация скорости работы команды (Agile)</li>
+                        <li>Основы тимбилдинга</li>
+                        <li>Делегирование задач</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="program-footer">
+                <p class="program-disclaimer">Программа каждый раз дополняется в зависимости от уровня и задач участников</p>
+                <div class="price-container">
+                    <span class="old-price">$700</span>
+                    <span class="new-price">$0<sup>*</sup></span>
+                </div>
+                <p class="grant-info">
+                    *Инициатива "Поддержка предпринимателей и IT-стартапов" реализуется в рамках проекта "Поддержка экономического развития на местном уровне в Республике Беларусь", который финансируется Европейским Союзом и реализуется Программой развития ООН в партнёрстве с Министерством экономики Республики Беларусь.
+                </p>
+                <div class="action-wrap">
+                    <a href="#" class="btn-primary-blue" onclick="registerForCourse('бизнес-тренера')">Записаться на курс</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="leadmap-section">
+        <div class="leadmap-bg-spot spot-1"></div>
+        <div class="leadmap-bg-spot spot-2"></div>
+
+        <div class="container">
+            <div class="leadmap-box">
+                <div class="leadmap-left">
+                    <h2>Гайдлайн “CustDev”</h2>
+                    <p class="leadmap-desc">Скачайте пошаговый план того, как узнать, за что и сколько клиент готов платить с помощью customer development.</p>
+                    <div class="leadmap-img-container">
+                        <img src="image/kniga.png" alt="Гайдлайн по CustDev">
+                    </div>
+                </div>
+                
+                <div class="leadmap-right">
+                    <div class="form-border-wrap">
+                        <form class="leadmap-form" id="leadForm" onsubmit="return validateForm(event)">
+                            <div class="form-group">
+                                <input type="text" name="name" id="formName" class="error-field" placeholder="Сергей" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone" id="formPhone" placeholder="+375 (29) 555-55-55" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" id="formEmail" placeholder="Электронная почта" required>
+                            </div>
+                            <div class="form-checkbox">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="formAgree" checked required>
+                                    <span class="checkmark"></span>
+                                    Согласие на обработку перс. данных
+                                </label>
+                            </div>
+                            <p class="form-error-msg" id="formError">Ошибка ввода. Проверьте правильность выделенных областей.</p>
+                            <button type="submit" class="btn-form-submit">Получить чек-лист на e-mail</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="tracker-benefits-section">
+        <div class="tracker-bg-blur"></div>
+        <div class="container">
+            <h2 class="section-title" style="color: #1e2e4f;">Что получит трекер</h2>
+
+            <div class="tracker-grid" id="trackerGrid">
+                <div class="tracker-card" onclick="showTrackerBenefit(this)">
+                    <div class="tracker-icon-wrap">
+                        <img src="image/a1.svg" alt="Опыт менторства">
+                    </div>
+                    <p>Опыт менторства и освоение основных инструментов трекинга</p>
+                </div>
+                <div class="tracker-card" onclick="showTrackerBenefit(this)">
+                    <div class="tracker-icon-wrap">
+                        <img src="image/a2.svg" alt="Методологии бизнеса">
+                    </div>
+                    <p>Методологии ведения стартапов и собственного бизнеса с х2 увеличением прибыли</p>
+                </div>
+                <div class="tracker-card" onclick="showTrackerBenefit(this)">
+                    <div class="tracker-icon-wrap">
+                        <img src="image/a3.svg" alt="Освоение методик">
+                    </div>
+                    <p>Освоение методики развития бизнеса и проектов на ранней стадии</p>
+                </div>
+                <div class="tracker-card" onclick="showTrackerBenefit(this)">
+                    <div class="tracker-icon-wrap">
+                        <img src="image/a4.svg" alt="Полезные знакомства">
+                    </div>
+                    <p>Полезные знакомства и вход в закрытое сообщество трекеров</p>
+                </div>
+                <div class="tracker-card" onclick="showTrackerBenefit(this)">
+                    <div class="tracker-icon-wrap">
+                        <img src="image/a5.svg" alt="Учебные материалы">
+                    </div>
+                    <p>Учебные материалы, и чек-листы для работы со стартапами</p>
+                </div>
+                <div class="tracker-card" onclick="showTrackerBenefit(this)">
+                    <div class="tracker-icon-wrap">
+                        <img src="image/a6.svg" alt="Обучение у специалистов">
+                    </div>
+                    <p>Обучение у ведущих специалистов, с опытом ведения 100+ бизнесов</p>
+                </div>
+                <div class="tracker-card" onclick="showTrackerBenefit(this)">
+                    <div class="tracker-icon-wrap">
+                        <img src="image/a7.svg" alt="Встречи наставников">
+                    </div>
+                    <p>Встречи наставников и проектов, где проверяют успешность проекта (трекшн-митинги)</p>
+                </div>
+                <div class="tracker-card" onclick="showTrackerBenefit(this)">
+                    <div class="tracker-icon-wrap">
+                        <img src="image/a8.svg" alt="Площадка для практики">
+                    </div>
+                    <p>Площадка для практики с большим количеством стартапов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="program-tracker-section">
+        <div class="prog-tracker-blur"></div>
+
+        <div class="container">
+            <h2 class="section-title" style="color: #1e2e4f;">Программа обучения трекеров</h2>
+
+            <div class="program-meta">
+                <div class="meta-item">
+                    <img src="image/time.png" alt="Часы">
+                    <span>80+20 часов</span>
+                </div>
+                <div class="meta-item">
+                    <img src="image/calendar.svg" alt="Календарь">
+                    <span>Пн-Пт 19:00-21:00, Сб-Вс 10:00-18:00</span>
+                </div>
+            </div>
+
+            <div class="tracker-prog-flex">
+                <div class="tracker-prog-card">
+                    <div class="t-prog-header">
+                        <h3>ПРОГРАММА БИЗНЕС-ТРЕНЕРОВ</h3>
+                        <div class="t-prog-img-wrap">
+                            <img src="image/b1.svg" alt="Иллюстрация программы тренеров">
+                        </div>
+                    </div>
+                    <ul class="t-prog-list">
+                        <li>Стратегия и изучение рынка</li>
+                        <li>Основные инструменты ведения бизнеса (стартапов)</li>
+                        <li>Основы работы в команде</li>
+                    </ul>
+                </div>
+
+                <div class="tracker-prog-plus" onclick="showPlusInfo()">+</div>
+
+                <div class="tracker-prog-card wide-card">
+                    <div class="t-prog-header">
+                        <h3>МЕТОДОЛОГИЯ ТРЕКИНГА</h3>
+                        <div class="t-prog-img-wrap">
+                            <img src="image/b2.svg" alt="Иллюстрация методологии трекинга">
+                        </div>
+                    </div>
+                    <ul class="t-prog-list">
+                        <li>Кто такой трекер и для чего он нужен?</li>
+                        <li>Методики развития бизнеса и проектов на ранних стадиях</li>
+                        <li>Методики трекинга</li>
+                        <li>Сегментация, ценностное предложение и другие методики</li>
+                        <li>Методология кратного роста</li>
+                        <li>Трекшн-карта, HADI-циклы, CustDev, тайм-менеджмент</li>
+                        <li>Методология проведения стратегических сессий</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="program-footer">
+                <p class="program-disclaimer">Программа каждый раз дополняется в зависимости от уровня и задач участников</p>
+                <div class="price-container">
+                    <span class="old-price">$1000</span>
+                    <span class="new-price">$0<sup>*</sup></span>
+                </div>
+                <p class="grant-info">
+                    *Инициатива "Поддержка предпринимателей и IT-стартапов" реализуется в рамках проекта "Поддержка экономического развития на местном уровне в Республике Беларусь", который финансируется Европейским Союзом и реализуется Программой развития ООН в партнёрстве с Министерством экономики Республики Беларусь.
+                </p>
+                <div class="action-wrap">
+                    <a href="#" class="btn-primary-blue" onclick="registerForCourse('трекера')">Записаться на курс</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-promo-section">
+        <div class="container">
+            <div class="video-promo-box">
+                <div class="promo-left-side">
+                    <h2>Видеозапись интенсива</h2>
+                    <p>Если Вы не сможете принять участие в интенсиве, то сможете получить доступ к его видеозаписи.</p>
+                    
+                    <div class="promo-features">
+                        <div class="p-feature-item" onclick="showVideoFeature('ULTRA HD 4K')">
+                            <div class="feat-icon-box text-badge">ULTRA HD 4K <span>2160</span></div>
+                            <p>Высокое качество видео</p>
+                        </div>
+                        <div class="p-feature-item" onclick="showVideoFeature('Online-трансляция')">
+                            <div class="feat-icon-box"><img src="image/camerik.svg" alt="Online"></div>
+                            <p>Online - трансляция</p>
+                        </div>
+                        <div class="p-feature-item" onclick="showVideoFeature('Доступ к скачиванию')">
+                            <div class="feat-icon-box"><img src="image/cloud.svg" alt="Скачивание"></div>
+                            <p>Доступ к скачиванию в любое время</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="promo-right-side">
+                    <div class="laptop-mockup" onclick="playVideo()">
+                        <img src="image/nn.png" alt="Ноутбук с видеозаписью лекции" style="cursor: pointer;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-main-title">FAQ</h2>
+            
+            <div class="faq-accordion-wrapper" id="faqWrapper">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Что такое акселератор?</span>
+                        <span class="accordion-arrow"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Акселератор — это интенсивная программа развития стартапов и действующих бизнесов через обучение, менторство и экспертную поддержку для быстрого кратного роста компании.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Могу ли я участвовать, если живу в другом городе?</span>
+                        <span class="accordion-arrow"></span>
+                    </button>
+                    <div class="accordion-content"><p>Да, предусмотрен полноценный онлайн-формат участия.</p></div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Когда будет известно, прошел ли я отбор?</span>
+                        <span class="accordion-arrow"></span>
+                    </button>
+                    <div class="accordion-content"><p>Результаты отбора будут высланы на вашу электронную почту сразу после рассмотрения заявок.</p></div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Как будет проходить обучение?</span>
+                        <span class="accordion-arrow"></span>
+                    </button>
+                    <div class="accordion-content"><p>Обучение включает в себя лекционные материалы, разборы кейсов и практическую работу.</p></div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Сколько будет длиться программа?</span>
+                        <span class="accordion-arrow"></span>
+                    </button>
+                    <div class="accordion-content"><p>Подробный тайминг и длительность программы указаны в блоках описания курсов.</p></div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Как часто я буду работать со стартапами?</span>
+                        <span class="accordion-arrow"></span>
+                    </button>
+                    <div class="accordion-content"><p>Практические воркшопы и трекшн-митинги со стартапами проходят еженедельно.</p></div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Могу ли я стать трекером, если опыт предпринимательства меньше 5 лет?</span>
+                        <span class="accordion-arrow"></span>
+                    </button>
+                    <div class="accordion-content"><p>Каждая заявка рассматривается индивидуально, если у вас высокий уровень профильной экспертизы.</p></div>
+                </div>
+            </div>
+
+            <div class="faq-more-action">
+                <button class="btn-faq-more" onclick="showMoreFaq()">Показать ещё</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="partners-section">
+        <div class="container">
+            <h2 class="partners-title">Партнеры</h2>
+            
+            <div class="partners-slider-container">
+                <button class="slider-arrow prev-arrow" onclick="slidePartners('prev')">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M7 13L1 7L7 1" stroke="#1E2E4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                
+                <div class="partners-logos-row" id="partnersRow">
+                    <div class="partner-logo-card" onclick="showPartner('Борисовский Технопарк')">
+                        <img src="image/r1.svg" alt="Борисовский Технопарк">
+                    </div>
+                    <div class="partner-logo-card" onclick="showPartner('Движение к успеху')">
+                        <img src="image/r2.svg" alt="Движение к успеху">
+                    </div>
+                    <div class="partner-logo-card" onclick="showPartner('С нами будущее')">
+                        <img src="image/r3.svg" alt="С нами будущее">
+                    </div>
+                    <div class="partner-logo-card" onclick="showPartner('Республиканская конфедерация предпринимательства')">
+                        <img src="image/r4.svg" alt="Республиканская конфедерация предпринимательства">
+                    </div>
+                </div>
+
+                <button class="slider-arrow next-arrow" onclick="slidePartners('next')">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M1 13L7 7L1 1" stroke="#1E2E4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col">
+                    <h3>Меню сайта</h3>
+                    <ul class="footer-menu">
+                        <li><a href="#" onclick="handleNavClick('Стартапам')">Стартапам</a></li>
+                        <li><a href="#" onclick="handleNavClick('Партнерам')">Партнерам</a></li>
+                        <li><a href="#" onclick="handleNavClick('О нас')">О нас</a></li>
+                        <li><a href="#" onclick="handleNavClick('Для сми')">Для сми</a></li>
+                        <li><a href="#" onclick="handleNavClick('FAQ')">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Работа с нами</h3>
+                    <ul class="footer-menu">
+                        <li><a href="#" onclick="handleApplication()">Подать заявку стартапам</a></li>
+                        <li><a href="#" onclick="handleApplication()">Стать трекером / экспертом</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <ul class="footer-contacts">
+                        <li>
+                            <a href="tel:+375336667466" class="contact-link phone-icon" onclick="handlePhoneCall()">
+                                +375 33 666 74 66
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:startupkraken@gmail.com" class="contact-link email-icon" onclick="handleEmail()">
+                                startupkraken@gmail.com
+                            </a>
+                        </li>
+                        <li class="contact-address geo-icon">
+                            Беларусь, г. Борисов, ул. Гагарина, 68А
+                        </li>
+                        <li class="contact-address geo-icon">
+                            Беларусь, г. Минск, ул. Кальварийская 25 (офис 611)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-middle-grid">
+                <div class="footer-social-block">
+                    <h3>Подписаться на новости</h3>
+                    <div class="footer-social-icons">
+                        <a href="#" class="soc-icon fb" onclick="handleSocialClick('Facebook')"></a>
+                        <a href="#" class="soc-icon vk" onclick="handleSocialClick('VK')"></a>
+                        <a href="#" class="soc-icon inst" onclick="handleSocialClick('Instagram')"></a>
+                        <a href="#" class="soc-icon in" onclick="handleSocialClick('LinkedIn')"></a>
+                    </div>
+                </div>
+
+                <div class="footer-collab-block">
+                    <h3>По вопросам сотрудничества</h3>
+                    <a href="mailto:steveas@mail.ru" class="collab-email" onclick="handleEmail()">steveas@mail.ru</a>
+                </div>
+            </div>
+
+            <div class="footer-partners-logos">
+                <div class="f-logo-item" onclick="showPartner('Европейский Союз')">
+                    <img src="image/n1.svg" alt="Инициатива финансируется Европейским Союзом">
+                    <p>Инициатива финансируется<br>Европейским Союзом</p>
+                </div>
+                <div class="f-logo-item" onclick="showPartner('Министерство экономики Республики Беларусь')">
+                    <img src="image/n2.svg" alt="Министерство экономики Республики Беларусь">
+                    <p>Министерство экономики<br>Республики Беларусь</p>
+                </div>
+                <div class="f-logo-item" onclick="showPartner('UN DP')">
+                    <img src="image/n3.svg" alt="UN DP">
+                    <p>Полноправные люди.<br>Устойчивые страны.</p>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p>Веб-сайт разработан в рамках проекта «Поддержка экономического развития на местном уровне в Республике Беларусь», который финансируется Европейским Союзом и реализуется Программой развития ООН в партнёрстве с Министерством экономики Республики Беларусь. Изложенная информация не отражает официальную позицию Европейского Союза, ПРООН и Министерства экономики Республики Беларусь.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ======================================================================
+         БЛОК 1: ВНЕДРЕНИЕ JS ЧЕРЕЗ ВНЕШНИЙ ФАЙЛ (способ 1)
+         ====================================================================== -->
+    <script src="js/main.js"></script>
+
+    <!-- ======================================================================
+         БЛОК 2: ВНЕДРЕНИЕ JS ЧЕРЕЗ ТЕГ <SCRIPT> ВНУТРИ HTML (способ 2)
+         ====================================================================== -->
+    <script>
+        // ================================================================
+        // 1. ДИАЛОГОВЫЕ ОКНА: alert(), confirm(), prompt()
+        // ================================================================
+        
+        // alert() — простое уведомление
+        function showAlert(message) {
+            alert('📢 ' + message);
+        }
+
+        // confirm() — подтверждение действия
+        function showConfirm(message) {
+            return confirm('❓ ' + message);
+        }
+
+        // prompt() — запрос ввода от пользователя
+        function showPrompt(message, defaultValue) {
+            return prompt('✏️ ' + message, defaultValue);
+        }
+
+        // ================================================================
+        // 2. ОПЕРАТОРЫ JS: if, switch, for, while, do..while, break, continue, return
+        // ================================================================
+
+        // 2.1. if / else if / else
+        function getCourseLevel(experience) {
+            if (experience >= 5) {
+                return 'Эксперт (5+ лет)';
+            } else if (experience >= 3) {
+                return 'Профессионал (3-5 лет)';
+            } else if (experience >= 1) {
+                return 'Начинающий (1-3 года)';
+            } else {
+                return 'Новичок (менее 1 года)';
+            }
+        }
+
+        // 2.2. switch
+        function getCourseType(courseId) {
+            switch(courseId) {
+                case 1:
+                    return 'Курс Бизнес-тренера';
+                case 2:
+                    return 'Курс Трекера';
+                case 3:
+                    return 'Курс Стартап-менеджера';
+                default:
+                    return 'Неизвестный курс';
+            }
+        }
+
+        // 2.3. for (с break и continue)
+        function findAvailableCourses(totalCourses, bookedCourses) {
+            var available = [];
+            for (var i = 1; i <= totalCourses; i++) {
+                // continue — пропускаем забронированные курсы
+                if (bookedCourses.indexOf(i) !== -1) {
+                    continue;
+                }
+                // break — если нашли 3 доступных курса, останавливаемся
+                if (available.length >= 3) {
+                    break;
+                }
+                available.push(i);
+            }
+            return available;
+        }
+
+        // 2.4. while
+        function countDown(seconds) {
+            var result = '';
+            var i = seconds;
+            while (i > 0) {
+                result += i + '... ';
+                i--;
+            }
+            result += 'Старт! 🚀';
+            return result;
+        }
+
+        // 2.5. do..while
+        function generateRandomCodes(count, maxAttempts) {
+            var codes = [];
+            var attempts = 0;
+            do {
+                var code = Math.floor(Math.random() * 10000).toString().padStart(4, '0');
+                if (codes.indexOf(code) === -1) {
+                    codes.push(code);
+                }
+                attempts++;
+            } while (codes.length < count && attempts < maxAttempts);
+            return codes;
+        }
+
+        // 2.6. return
+        function calculateDiscount(price, isMember) {
+            if (isMember) {
+                return price * 0.8; // 20% скидка
+            } else {
+                return price * 0.95; // 5% скидка
+            }
+        }
+
+        // ================================================================
+        // 3. ОБРАБОТЧИКИ СОБЫТИЙ (вызов функций)
+        // ================================================================
+
+        // Навигация
+        function handleNavClick(page) {
+            showAlert('Вы перешли на страницу: ' + page);
+            return false;
+        }
+
+        // Социальные сети
+        function handleSocialClick(platform) {
+            showAlert('Вы перешли в ' + platform);
+            return false;
+        }
+
+        // Подача заявки
+        function handleApplication() {
+            var name = showPrompt('Введите ваше имя:', 'Иван');
+            if (name !== null && name.trim() !== '') {
+                var confirmResult = showConfirm('Отправить заявку от ' + name + '?');
+                if (confirmResult) {
+                    showAlert('✅ Заявка от ' + name + ' успешно отправлена!');
+                } else {
+                    showAlert('❌ Отправка заявки отменена');
+                }
+            } else {
+                showAlert('❌ Имя не может быть пустым');
+            }
+            return false;
+        }
+
+        // Язык
+        function handleLanguage() {
+            var lang = showPrompt('Выберите язык (ru/en):', 'ru');
+            if (lang !== null) {
+                var message = 'Выбран язык: ' + (lang.toLowerCase() === 'en' ? 'English' : 'Русский');
+                showAlert(message);
+            }
+            return false;
+        }
+
+        // Шаги обучения
+        function showStepDetails(title, description) {
+            showAlert('📚 ' + title + '\n' + description);
+        }
+
+        // Курсы
+        function showCourseDetails(course) {
+            var level = getCourseLevel(3);
+            showAlert('📖 Курс: ' + course + '\nУровень: ' + level + '\nНажмите "Записаться" для регистрации');
+        }
+
+        // Преимущества
+        function showBenefit(element) {
+            var text = element.querySelector('p').textContent;
+            showAlert('💡 ' + text);
+        }
+
+        // Преимущества трекера
+        function showTrackerBenefit(element) {
+            var text = element.querySelector('p').textContent;
+            showAlert('🎯 ' + text);
+        }
+
+        // Регистрация на курс
+        function registerForCourse(course) {
+            var name = showPrompt('Введите ваше имя для записи на курс ' + course + ':', '');
+            if (name !== null && name.trim() !== '') {
+                var confirmResult = showConfirm('Записать ' + name + ' на курс ' + course + '?');
+                if (confirmResult) {
+                    showAlert('✅ Вы успешно записаны на курс ' + course + '!');
+                }
+            }
+            return false;
+        }
+
+        // Видео
+        function playVideo() {
+            showAlert('🎬 Воспроизведение видео интенсива');
+        }
+
+        function showVideoFeature(feature) {
+            showAlert('🎥 Функция: ' + feature);
+        }
+
+        // Партнеры
+        function showPartner(name) {
+            showAlert('🤝 Партнер: ' + name);
+        }
+
+        // Телефон
+        function handlePhoneCall() {
+            showAlert('📞 Звонок по номеру +375 33 666 74 66');
+            return false;
+        }
+
+        // Email
+        function handleEmail() {
+            showAlert('📧 Открыть почтовый клиент');
+            return false;
+        }
+
+        // Плюс
+        function showPlusInfo() {
+            showAlert('➕ Программа бизнес-тренеров + Методология трекинга');
+        }
+
+        // Аккордеон
+        function toggleAccordion(button) {
+            var item = button.parentElement;
+            var content = button.nextElementSibling;
+            
+            document.querySelectorAll('.accordion-item').forEach(function(otherItem) {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                }
+            });
+            
+            item.classList.toggle('active');
+            if (item.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                content.style.maxHeight = null;
+            }
+        }
+
+        // FAQ "Показать ещё"
+        function showMoreFaq() {
+            var items = document.querySelectorAll('.accordion-item');
+            var hiddenCount = 0;
+            for (var i = 0; i < items.length; i++) {
+                if (!items[i].classList.contains('active')) {
+                    hiddenCount++;
+                }
+            }
+            showAlert('📋 Всего вопросов: ' + items.length + '\nОткрыто: ' + (items.length - hiddenCount) + '\nСкрыто: ' + hiddenCount);
+        }
+
+        // Слайдер партнеров
+        var currentSlide = 0;
+        function slidePartners(direction) {
+            var row = document.getElementById('partnersRow');
+            var cards = row.querySelectorAll('.partner-logo-card');
+            var total = cards.length;
+            
+            if (direction === 'next') {
+                currentSlide = (currentSlide + 1) % total;
+            } else {
+                currentSlide = (currentSlide - 1 + total) % total;
+            }
+            
+            var offset = -currentSlide * 100;
+            row.style.transform = 'translateX(' + offset + '%)';
+            showAlert('📸 Слайд ' + (currentSlide + 1) + ' из ' + total);
+        }
+
+        // Валидация формы (используем операторы)
+        function validateForm(event) {
+            event.preventDefault();
+            
+            var name = document.getElementById('formName').value.trim();
+            var phone = document.getElementById('formPhone').value.trim();
+            var email = document.getElementById('formEmail').value.trim();
+            var agree = document.getElementById('formAgree').checked;
+            
+            var errors = [];
+            
+            // if
+            if (name === '') {
+                errors.push('Имя не может быть пустым');
+            }
+            if (phone === '') {
+                errors.push('Телефон не может быть пустым');
+            }
+            if (email === '') {
+                errors.push('Email не может быть пустым');
+            }
+            if (!agree) {
+                errors.push('Необходимо согласие на обработку данных');
+            }
+            
+            // switch для определения типа ошибки
+            var errorType = errors.length > 0 ? 'error' : 'success';
+            switch(errorType) {
+                case 'error':
+                    var errorMsg = '❌ Ошибки в форме:\n';
+                    for (var i = 0; i < errors.length; i++) {
+                        errorMsg += '• ' + errors[i] + '\n';
+                    }
+                    showAlert(errorMsg);
+                    return false;
+                case 'success':
+                    showAlert('✅ Форма успешно отправлена!\nИмя: ' + name + '\nТелефон: ' + phone + '\nEmail: ' + email);
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
+        // ================================================================
+        // 4. ДОПОЛНИТЕЛЬНЫЕ ФУНКЦИИ (for, while, do..while)
+        // ================================================================
+
+        // Демонстрация работы с циклами при загрузке страницы
+        window.onload = function() {
+            // for — перебор всех benefit-карточек
+            var benefits = document.querySelectorAll('.benefit-card');
+            var benefitCount = 0;
+            for (var i = 0; i < benefits.length; i++) {
+                if (benefits[i].querySelector('p')) {
+                    benefitCount++;
+                }
+            }
+            console.log('✅ Найдено преимуществ: ' + benefitCount);
+            
+            // while — поиск элементов
+            var cards = document.querySelectorAll('.tracker-card');
+            var j = 0;
+            var trackerCount = 0;
+            while (j < cards.length) {
+                if (cards[j].querySelector('p')) {
+                    trackerCount++;
+                }
+                j++;
+            }
+            console.log('✅ Найдено трекер-карточек: ' + trackerCount);
+            
+            // do..while — генерация случайных чисел
+            var randomNumbers = [];
+            var k = 0;
+            do {
+                randomNumbers.push(Math.floor(Math.random() * 100));
+                k++;
+            } while (k < 5);
+            console.log('✅ Случайные числа: ' + randomNumbers.join(', '));
+        };
+
+        // ================================================================
+        // 5. ДЕМОНСТРАЦИЯ РАБОТЫ ОПЕРАТОРОВ (вызов при загрузке)
+        // ================================================================
+        
+        // Демонстрация if
+        console.log('✅ Уровень опыта (3 года): ' + getCourseLevel(3));
+        console.log('✅ Уровень опыта (5 лет): ' + getCourseLevel(5));
+        console.log('✅ Уровень опыта (0 лет): ' + getCourseLevel(0));
+        
+        // Демонстрация switch
+        console.log('✅ Курс #1: ' + getCourseType(1));
+        console.log('✅ Курс #2: ' + getCourseType(2));
+        console.log('✅ Курс #5: ' + getCourseType(5));
+        
+        // Демонстрация for с break и continue
+        var booked = [2, 4, 6];
+        var available = findAvailableCourses(10, booked);
+        console.log('✅ Доступные курсы: ' + available.join(', '));
+        
+        // Демонстрация while
+        console.log('✅ Обратный отсчет: ' + countDown(5));
+        
+        // Демонстрация do..while
+        var codes = generateRandomCodes(5, 20);
+        console.log('✅ Сгенерированные коды: ' + codes.join(', '));
+        
+        // Демонстрация return
+        console.log('✅ Цена со скидкой (участник): $' + calculateDiscount(100, true));
+        console.log('✅ Цена со скидкой (не участник): $' + calculateDiscount(100, false));
+        
+        // Вывод приветствия
+        setTimeout(function() {
+            console.log('✅ KROKIT — сайт готов к работе!');
+            console.log('📌 Для демонстрации диалоговых окон нажмите на любую интерактивную кнопку.');
+        }, 500);
+    </script>
+
+</body>
+</html>

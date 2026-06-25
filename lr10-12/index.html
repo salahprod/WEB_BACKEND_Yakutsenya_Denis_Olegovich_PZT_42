@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вариант №20 - Лабораторные работы JS</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    
+    <script>
+        function showTime() {
+            var now = new Date();
+            var day = String(now.getDate()).padStart(2, '0');
+            var month = String(now.getMonth() + 1).padStart(2, '0');
+            var year = now.getFullYear();
+            var hours = String(now.getHours()).padStart(2, '0');
+            var seconds = String(now.getSeconds()).padStart(2, '0');
+            var dateStr = day + '.' + month + '.' + year + ' ' + hours + '-' + seconds;
+            alert('Текущая дата: ' + dateStr);
+        }
+    </script>
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1>Лабораторные работы №10-13</h1>
+            <p class="subtitle">Вариант №20</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <section class="task-block">
+                <h2>Задание 1</h2>
+                <p>Вывести в диалоговое окно дату в формате часы-секунды.</p>
+                <button class="btn-primary" onclick="showTime()">Время</button>
+            </section>
+
+            <section class="task-block">
+                <h2>Задание 2</h2>
+                <p>Разработать скрипт, который выведет на экран «Сегодня лучший день» 5 раз. Использовать while.</p>
+                <div id="task2-result" class="result-box"></div>
+                <button class="btn-secondary" onclick="showTask2()">Выполнить</button>
+            </section>
+
+            <section class="task-block">
+                <h2>Задание 3</h2>
+                <p>Сформировать массив из 5 целых элементов. Добавить в конец массива еще два элемента. Вывести содержимое массива после добавления.</p>
+                <div id="task3-result" class="result-box"></div>
+                <button class="btn-secondary" onclick="showTask3()">Выполнить</button>
+            </section>
+
+            <section class="task-block">
+                <h2>Задание 4</h2>
+                <p>Расчет по формуле: π + sin(x) + √x</p>
+                <div id="task4-result" class="result-box"></div>
+                <button class="btn-secondary" onclick="showTask4()">Выполнить</button>
+            </section>
+
+            <section class="task-block">
+                <h2>Задание 5</h2>
+                <p>Строка S1 = «Я люблю Гродно»</p>
+                <p>Строка S2 = «ул садовая22»</p>
+                <div id="task5-result" class="result-box"></div>
+                <button class="btn-secondary" onclick="showTask5()">Выполнить</button>
+            </section>
+
+        </div>
+    </main>
+
+   
+
+    <script>
+        function showTask2() {
+            var output = '';
+            var i = 0;
+            while (i < 5) {
+                output += 'Сегодня лучший день!<br>';
+                i++;
+            }
+            document.getElementById('task2-result').innerHTML = output;
+        }
+
+        function showTask3() {
+            var arr = [10, 25, 37, 48, 59];
+            var result = 'Исходный массив: [' + arr.join(', ') + ']<br>';
+            arr.push(72, 88);
+            result += 'После добавления: [' + arr.join(', ') + ']';
+            document.getElementById('task3-result').innerHTML = result;
+        }
+
+        function showTask5() {
+            var s1 = 'Я люблю Гродно';
+            var s2 = 'ул садовая22';
+            var n = 20;
+            
+            var result = '';
+            result += 'Длина строки S2 («' + s2 + '») = ' + s2.length + ' символов<br><br>';
+            
+            var index = (n - 1) < s1.length ? (n - 1) : (s1.length - 1);
+            var char = s1[index];
+            var asciiCode = s1.charCodeAt(index);
+            
+            result += 'Строка S1: «' + s1 + '»<br>';
+            result += n + '-й символ (индекс ' + index + '): «' + char + '»<br>';
+            result += 'ASCII-код: ' + asciiCode + '<br><br>';
+            
+            var s1New = s1.replace('Гродно', 'политех');
+            result += 'Замена "Гродно" → "политех":<br>';
+            result += 'Было: «' + s1 + '»<br>';
+            result += 'Стало: «' + s1New + '»';
+            
+            document.getElementById('task5-result').innerHTML = result;
+        }
+
+        window.onload = function() {
+            showTask2();
+            showTask3();
+            showTask4();
+            showTask5();
+        };
+    </script>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
