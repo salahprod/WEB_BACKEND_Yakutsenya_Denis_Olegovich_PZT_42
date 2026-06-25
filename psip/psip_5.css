@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* фиксированный размер страницы */
+.layout {
+    width: 1550px;
+    height: 900px;
+    box-sizing: border-box;
+}
+
+.layout div {
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid black;
+}
+
+/* HEADER */
+.header {
+    height: 120px;
+    line-height: 120px;
+    background: #ececec;
+    font-size: 42px;
+}
+
+/* MAIN */
+.main-section {
+    display: flex;
+    height: 600px;
+}
+
+/* ЛЕВАЯ ЧАСТЬ */
+.left-side {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+}
+
+.block-2 {
+    height: 60px;
+    line-height: 60px;
+    background: #f2f2f2;
+    font-size: 32px;
+}
+
+.left-content {
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+}
+
+.middle-left {
+    display: flex;
+    height: 432px;
+}
+
+.block-3,
+.block-4 {
+    width: 50%;
+    line-height: 432px;
+    font-size: 50px;
+    background: #fafafa;
+}
+
+.empty-row {
+    height: 108px;
+    background: white;
+}
+
+/* ЦЕНТР */
+.block-5 {
+    width: 34%;
+    line-height: 600px;
+    font-size: 60px;
+    background: #f7f7f7;
+}
+
+/* ПРАВАЯ ЧАСТЬ */
+.right-side {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+}
+
+.block-6 {
+    height: 120px;
+    line-height: 120px;
+    font-size: 32px;
+    background: #f2f2f2;
+}
+
+.block-7 {
+    height: 360px;
+    line-height: 360px;
+    font-size: 50px;
+    background: #fafafa;
+}
+
+.block-8 {
+    height: 120px;
+    line-height: 120px;
+    font-size: 32px;
+    background: #f2f2f2;
+}
+
+/* БЛОК 9 */
+.block-9 {
+    height: 100px;
+    line-height: 100px;
+    background: #ececec;
+    font-size: 36px;
+}
+
+/* FOOTER */
+.footer {
+    height: 80px;
+    line-height: 80px;
+    background: #ececec;
+    font-size: 42px;
+    border-bottom: none;
+}

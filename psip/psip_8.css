@@ -1,0 +1,283 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+}
+
+/* Основная сетка */
+.layout {
+    width: 100%;
+    max-width: 1550px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: white;
+}
+
+.layout div {
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid black;
+}
+
+/* HEADER */
+.header {
+    height: 120px;
+    line-height: 120px;
+    background: #ececec;
+    font-size: 42px;
+}
+
+/* MAIN */
+.main-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* ЛЕВАЯ ЧАСТЬ */
+.left-side {
+    width: 33.333%;
+    display: flex;
+    flex-direction: column;
+}
+
+.block-2 {
+    height: 60px;
+    line-height: 60px;
+    background: #f2f2f2;
+    font-size: 32px;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.middle-left {
+    display: flex;
+    flex: 4;
+}
+
+.block-3,
+.block-4 {
+    width: 50%;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.empty-row {
+    flex: 1;
+    background: white;
+}
+
+/* ЦЕНТР */
+.block-5 {
+    width: 33.333%;
+    background: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+}
+
+/* ПРАВАЯ ЧАСТЬ */
+.right-side {
+    width: 33.333%;
+    display: flex;
+    flex-direction: column;
+}
+
+.block-6 {
+    height: 120px;
+    line-height: 120px;
+    font-size: 32px;
+    background: #f2f2f2;
+}
+
+/* БЛОК С ФОРМОЙ */
+.block-7 {
+    flex: 1;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    padding: 20px;
+}
+
+.feedback-form {
+    width: 95%;
+    max-width: 620px;
+    background: #f8f8f8;
+    border: 6px solid transparent;
+    border-image: repeating-linear-gradient(
+        45deg,
+        #7cc9e8 0px,
+        #7cc9e8 10px,
+        white 10px,
+        white 20px,
+        #f28b74 20px,
+        #f28b74 30px,
+        white 30px,
+        white 40px
+    ) 10;
+    padding: 28px;
+    box-sizing: border-box;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 34px;
+    color: #777;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-title::before,
+.form-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 32%;
+    height: 1px;
+    background: #d0d0d0;
+}
+
+.form-title::before {
+    left: 0;
+}
+
+.form-title::after {
+    right: 0;
+}
+
+.form-text {
+    text-align: center;
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    border: 1px solid #cfcfcf;
+    padding: 12px;
+    margin-bottom: 18px;
+    font-size: 18px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: white;
+}
+
+.feedback-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.form-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.captcha {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.captcha span {
+    font-size: 54px;
+    font-family: cursive;
+    font-style: italic;
+    transform: rotate(-8deg);
+}
+
+.captcha input {
+    width: 80px;
+    margin: 0;
+}
+
+.form-bottom button {
+    background: linear-gradient(#6c99c7, #4d7fb4);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* БЛОК 8 */
+.block-8 {
+    height: 120px;
+    line-height: 120px;
+    font-size: 32px;
+    background: #f2f2f2;
+}
+
+/* БЛОК 9 */
+.block-9 {
+    height: 100px;
+    line-height: 100px;
+    background: #ececec;
+    font-size: 36px;
+}
+
+/* FOOTER */
+.footer {
+    height: 80px;
+    line-height: 80px;
+    background: #ececec;
+    font-size: 42px;
+}
+
+/* АДАПТИВНОСТЬ */
+@media screen and (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+    }
+
+    .left-side,
+    .block-5,
+    .right-side {
+        width: 100%;
+    }
+
+    .middle-left {
+        flex-direction: column;
+    }
+
+    .block-3,
+    .block-4 {
+        width: 100%;
+        min-height: 150px;
+    }
+
+    .feedback-form {
+        padding: 15px;
+    }
+
+    .form-title {
+        font-size: 24px;
+    }
+
+    .form-text {
+        font-size: 14px;
+    }
+
+    .form-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-bottom button {
+        width: 100%;
+    }
+}

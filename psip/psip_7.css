@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+}
+
+/* Резиновая (жидкая) сетка — ширина в процентах */
+.layout {
+    width: 100%;
+    max-width: 1550px;  /* ограничиваем максимальную ширину */
+    margin: 0 auto;      /* центрируем на больших экранах */
+    box-sizing: border-box;
+    background: white;
+}
+
+.layout div {
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid black;
+}
+
+/* HEADER */
+.header {
+    height: 120px;
+    line-height: 120px;
+    background: #ececec;
+    font-size: 42px;
+}
+
+/* MAIN */
+.main-section {
+    display: flex;
+    flex-wrap: wrap;  /* позволяет ряду схлопываться на маленьких экранах */
+    width: 100%;
+}
+
+/* ЛЕВАЯ ЧАСТЬ */
+.left-side {
+    width: 33.333%;
+    display: flex;
+    flex-direction: column;
+}
+
+.block-2 {
+    height: 60px;
+    line-height: 60px;
+    background: #f2f2f2;
+    font-size: 32px;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.middle-left {
+    display: flex;
+    flex: 4;          /* 4 части из 5 (4 + 1 = 5) */
+}
+
+.block-3,
+.block-4 {
+    width: 50%;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.empty-row {
+    flex: 1;          /* 1 часть из 5 */
+    background: white;
+}
+
+/* ЦЕНТР */
+.block-5 {
+    width: 33.333%;
+    background: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+}
+
+/* ПРАВАЯ ЧАСТЬ */
+.right-side {
+    width: 33.333%;
+    display: flex;
+    flex-direction: column;
+}
+
+.block-6 {
+    height: 120px;
+    line-height: 120px;
+    font-size: 32px;
+    background: #f2f2f2;
+}
+
+.block-7 {
+    flex: 1;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    min-height: 200px;  /* чтобы не сжимался слишком сильно */
+}
+
+.block-8 {
+    height: 120px;
+    line-height: 120px;
+    font-size: 32px;
+    background: #f2f2f2;
+}
+
+/* БЛОК 9 */
+.block-9 {
+    height: 100px;
+    line-height: 100px;
+    background: #ececec;
+    font-size: 36px;
+}
+
+/* FOOTER */
+.footer {
+    height: 80px;
+    line-height: 80px;
+    background: #ececec;
+    font-size: 42px;
+    border-bottom: none;
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+
+/* Планшеты (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .header {
+        height: 90px;
+        line-height: 90px;
+        font-size: 36px;
+    }
+
+    .block-2 {
+        height: 50px;
+        line-height: 50px;
+        font-size: 28px;
+    }
+
+    .block-3,
+    .block-4 {
+        font-size: 40px;
+    }
+
+    .block-5 {
+        font-size: 48px;
+    }
+
+    .block-6,
+    .block-8 {
+        height: 90px;
+        line-height: 90px;
+        font-size: 28px;
+    }
+
+    .block-7 {
+        font-size: 40px;
+    }
+
+    .block-9 {
+        height: 80px;
+        line-height: 80px;
+        font-size: 32px;
+    }
+
+    .footer {
+        height: 70px;
+        line-height: 70px;
+        font-size: 36px;
+    }
+}
+
+/* Мобильные устройства (до 768px) — вертикальная компоновка */
+@media screen and (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+    }
+
+    .left-side,
+    .block-5,
+    .right-side {
+        width: 100%;
+    }
+
+    .header {
+        height: 70px;
+        line-height: 70px;
+        font-size: 28px;
+    }
+
+    .block-2 {
+        height: 45px;
+        line-height: 45px;
+        font-size: 24px;
+    }
+
+    .middle-left {
+        flex-direction: column;
+    }
+
+    .block-3,
+    .block-4 {
+        width: 100%;
+        min-height: 150px;
+        font-size: 36px;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .empty-row {
+        display: none;  /* убираем пустой промежуток на мобильных */
+    }
+
+    .block-5 {
+        min-height: 200px;
+        font-size: 42px;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .block-6,
+    .block-8 {
+        height: 60px;
+        line-height: 60px;
+        font-size: 24px;
+    }
+
+    .block-7 {
+        min-height: 180px;
+        font-size: 36px;
+    }
+
+    .block-9 {
+        height: 60px;
+        line-height: 60px;
+        font-size: 28px;
+    }
+
+    .footer {
+        height: 55px;
+        line-height: 55px;
+        font-size: 28px;
+    }
+}
+
+/* Очень маленькие экраны (до 480px) */
+@media screen and (max-width: 480px) {
+    .header {
+        height: 55px;
+        line-height: 55px;
+        font-size: 24px;
+    }
+
+    .block-2 {
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .block-3,
+    .block-4 {
+        font-size: 28px;
+        min-height: 120px;
+    }
+
+    .block-5 {
+        font-size: 32px;
+        min-height: 160px;
+    }
+
+    .block-6,
+    .block-8 {
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+    }
+
+    .block-7 {
+        font-size: 28px;
+        min-height: 150px;
+    }
+
+    .block-9 {
+        height: 50px;
+        line-height: 50px;
+        font-size: 24px;
+    }
+
+    .footer {
+        height: 48px;
+        line-height: 48px;
+        font-size: 24px;
+    }
+}

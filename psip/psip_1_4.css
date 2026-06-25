@@ -1,0 +1,93 @@
+
+@import url("import.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a0f0a 0%, #0a1a0a 100%);
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #0a2f0a 0%, #051a05 100%);
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 4px solid #00ff3a;
+    box-shadow: 0 4px 20px rgba(0, 255, 58, 0.2);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-shadow: 0 0 15px #00ff3a;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #cccccc;
+}
+
+nav {
+    background: #0d1a0d;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+}
+
+nav ol {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+nav li a {
+    color: #cccccc;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav li a:hover {
+    color: #00ff3a;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background: rgba(10, 20, 10, 0.7);
+    margin: 40px 0;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #2a5a2a;
+}
+
+h2 {
+    color: #00ff3a;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+img {
+    border-radius: 16px;
+    margin: 20px 0;
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #0a0f0a;
+    margin-top: 40px;
+}
